@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+/__pycache/
+__pycache/
+.pytest_cache
+/data_files
+.csv
+.txt
+.enw
+.ris

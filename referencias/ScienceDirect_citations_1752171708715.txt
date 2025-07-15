@@ -1,0 +1,298 @@
+Amir Khosravian, Abdollah Amirkhani, Hossein Kashiani, Masoud Masih-Tehrani,
+Generalizing state-of-the-art object detectors for autonomous vehicles in unseen environments,
+Expert Systems with Applications,
+Volume 183,
+2021,
+115417,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2021.115417.
+(https://www.sciencedirect.com/science/article/pii/S0957417421008368)
+Abstract: In scene understanding for autonomous vehicles (AVs), models trained on the available datasets fail to generalize well to the complex, real-world scenarios with higher dynamics. In this work, we attempt to handle the distribution mismatch by employing the generative adversarial network (GAN) and weather modeling to strengthen the intra-domain data. We also alleviate the fragility of our trained models against natural distortions with state-of-the-art augmentation approaches. Finally, we assess our method for cross-domain object detection through CARLA simulation. Our experiments demonstrate that: (1) Augmenting training class with even limited intra-domain data captured from the adverse weather conditions boosts the generalization of the two kinds of object detectors; (2) Exploiting GANs and weather modeling to elaborately simulate the adverse, intra-domain weather conditions manages to surmount the adverse data scarcity issue for intra-domain object detection; (3) A combination of Augmix and style augmentations not only can promote the robustness of our trained models against different natural distortions but also can boost their performance in the cross-domain object detection; (4) Training GANs for unsupervised image-to-image translation by means of the existing, large-scale datasets outside of our training domain is found beneficial to alleviate image-based and instance-based domain shifts.
+Keywords: Autonomous vehicles; Object detection; Distribution mismatch; Natural distortions; Cross-domain robustness
+
+Carmen Gheorghe, Mihai Duguleana, Razvan Gabriel Boboc, Cristian Cezar Postelnicu,
+Analyzing Real-Time Object Detection with YOLO Algorithm in Automotive Applications: A Review,
+CMES - Computer Modeling in Engineering and Sciences,
+Volume 141, Issue 3,
+2024,
+Pages 1939-1981,
+ISSN 1526-1492,
+https://doi.org/10.32604/cmes.2024.054735.
+(https://www.sciencedirect.com/science/article/pii/S1526149224003011)
+Abstract: Identifying objects in real-time is a technology that is developing rapidly and has a huge potential for expansion in many technical fields. Currently, systems that use image processing to detect objects are based on the information from a single frame. A video camera positioned in the analyzed area captures the image, monitoring in detail the changes that occur between frames. The You Only Look Once (YOLO) algorithm is a model for detecting objects in images, that is currently known for the accuracy of the data obtained and the fast-working speed. This study proposes a comprehensive literature review of YOLO research, as well as a bibliometric analysis to map the trends in the automotive field from 2020 to 2024. Object detection applications using YOLO were categorized into three primary domains: road traffic, autonomous vehicle development, and industrial settings. A detailed analysis was conducted for each domain, providing quantitative insights into existing implementations. Among the various YOLO architectures evaluated (v2–v8, H, X, R, C), YOLO v8 demonstrated superior performance with a mean Average Precision (mAP) of 0.99.
+Keywords: YOLO; automotive; autonomous vehicles; traffic; industry
+
+Alireza Ghasemieh, Rasha Kashef,
+3D object detection for autonomous driving: Methods, models, sensors, data, and challenges,
+Transportation Engineering,
+Volume 8,
+2022,
+100115,
+ISSN 2666-691X,
+https://doi.org/10.1016/j.treng.2022.100115.
+(https://www.sciencedirect.com/science/article/pii/S2666691X22000136)
+Abstract: Detection of the surrounding objects of a vehicle is the most crucial step in autonomous driving. Failure to identify those objects correctly in a timely manner can cause irreparable damage, impacting our safety and society. Several studies have been introduced to identify these objects in the two-dimensional (2D) and three-dimensional (3D) vector space. The 2D object detection method has achieved remarkable success; however, in the last few years, detecting objects in 3D have received more remarkable adoption. 3D object recognition has several advantages over 2D detection methods, as more accurate information about the environment is obtained for better detection. For example, the depth of the images is not considered in the 2D detection, which reduces the detection accuracy. Despite considerable efforts in 3D object detection, it has not yet reached the stage of maturity. Therefore, in this paper, we aim at providing a comprehensive overview of the state-of-the-art 3D object detection methods, with a focus on 1) identifying advantages and limitations, 2) revelling a novel categorization of the literature, 3) outlying the various training procedures, 4) highlighting the research gap in the existing methods and 5) building a road map for future directions.
+Keywords: Autonomous vehicles; Sensors; LiDAR; Point cloud; Stereo images; 3D object detection
+
+Wensheng Zhang, Hongli Shi, Yunche Zhao, Zhenan Feng, Ruggiero Lovreglio,
+MMAF-Net: Multi-view multi-stage adaptive fusion for multi-sensor 3D object detection,
+Expert Systems with Applications,
+Volume 242,
+2024,
+122716,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2023.122716.
+(https://www.sciencedirect.com/science/article/pii/S0957417423032189)
+Abstract: In this paper, we propose a 3D object detection method called MMAF-Net that is based on the multi-view and multi-stage adaptive fusion of RGB images and LiDAR point cloud data. This is an end-to-end architecture, which combines the characteristics of RGB images, the front view of point clouds based on reflection intensity, and the bird’s eye view of point clouds. It also adopts a multi-stage fusion approach of “data-level fusion + feature-level fusion” to fully exploit the strength of multimodal information. Our proposed method addresses key challenges found in current 3D object detection methods for autonomous driving, including insufficient feature extraction from multimodal data, rudimentary fusion techniques, and sensitivity to distance and occlusion. To ensure the comprehensive integration of multimodal information, we present a series of targeted fusion methods. Firstly, we propose a novel input form that encodes dense point cloud reflectivity information into the image to enhance its representational power. Secondly, we design the Region Attention Adaptive Fusion module utilizing an attention mechanism to guide the network in adaptively adjusting the importance of different features. Finally, we extend the 2D DIOU (Distance Intersection over Union) loss function to 3D and develop a joint regression loss based on 3D_DIOU and SmoothL1 to optimize the similarity between detected and ground truth boxes. The experimental results on the KITTI dataset demonstrate that MMAF-Net effectively addresses the challenges posed by highly obscured or crowded scenes while maintaining real-time performance and improving the detection accuracy of smaller and more difficult objects that are occluded at far distances.
+Keywords: 3D object detection; Multi-sensor fusion; Attention mechanism; Joint regression loss; Autonomous driving
+
+Linh Trinh, Siegfried Mercelis, Ali Anwar,
+A comprehensive review of datasets and deep learning techniques for vision in unmanned surface vehicles,
+Ocean Engineering,
+Volume 334,
+2025,
+121501,
+ISSN 0029-8018,
+https://doi.org/10.1016/j.oceaneng.2025.121501.
+(https://www.sciencedirect.com/science/article/pii/S0029801825011850)
+Abstract: Unmanned Surface Vehicles (USVs) have emerged as a major platform in maritime operations, capable of supporting a wide range of applications. USVs allow for difficult unmanned tasks in harsh maritime environments. With the rapid development of USVs, many vision tasks such as detection and segmentation become increasingly important. Datasets play an important role in encouraging and improving the research and development of reliable vision algorithms for USVs. In this regard, a large number of recent studies have focused on the release of vision datasets for USVs. Along with the development of datasets, a variety of deep learning techniques have also been studied, with a focus on USVs. However, there is a lack of a systematic review of recent studies in both datasets and vision techniques to provide a comprehensive picture of the current development of vision on USVs, including limitations and trends. In this study, we provide a comprehensive review of both USV datasets and deep learning techniques for vision tasks. Our review was conducted using a large number of vision datasets from USVs. We elaborate several challenges and potential opportunities for research and development in USV vision based on a thorough analysis of current datasets and deep learning techniques.
+Keywords: Unmanned surface vessels; Datasets; Deep learning; Computer vision
+
+Yifan Liu, Yong Zhang, Rukai Lan, Cheng Cheng, Zhaolong Wu,
+AWARDistill: Adaptive and robust 3D object detection in adverse conditions through knowledge distillation,
+Expert Systems with Applications,
+Volume 266,
+2025,
+126032,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2024.126032.
+(https://www.sciencedirect.com/science/article/pii/S0957417424028999)
+Abstract: 3D object detection is a crucial component of autonomous vehicle perception, but adverse weather conditions can affect sensor performance, leading to a deterioration in data quality, thereby posing significant challenges to the further development of perception. This paper presents a novel, robust 3D object detection framework to address this issue. Firstly, to tackle the problem of lacking adverse weather datasets, we propose the Multi-modal Adverse-Weather Data Simulation Theory (MIST), which employs optical models to simulate fog and replicates the dynamic properties of rain and snow to recreate real-world circumstances. Secondly, we propose the Adaptive and Robust 3D Object Detection Framework in Adverse Conditions through Knowledge Distillation (AWARDistill), which employs staged knowledge distillation to enable the model to adapt to adverse weather conditions, significantly enhancing detection accuracy and robustness. Additionally, we designed two modules that can be integrated into other detection frameworks to enhance robustness. We evaluated the performance of AWARDistill on multiple datasets. On the KITTI dataset, our model attained an average precision of about 88% and can efficiently adapt to extreme weather. Extensive experiments demonstrate our model’s effectiveness and superiority, providing strong support for autonomous driving in challenging weather environments.
+Keywords: Autonomous driving; 3D object detection; Adverse weather; Knowledge distillation
+
+Bharat Mahaur, K.K. Mishra, Anoj Kumar,
+An improved lightweight small object detection framework applied to real-time autonomous driving,
+Expert Systems with Applications,
+Volume 234,
+2023,
+121036,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2023.121036.
+(https://www.sciencedirect.com/science/article/pii/S0957417423015385)
+Abstract: Recent deep learning-based object detectors have shown compelling performance for the detection of large objects in autonomous driving applications. However, the detection of small objects like traffic signs and traffic lights is challenging owing to the complex nature of such objects. This article investigates how an existing object detector can be adjusted to address specific tasks and how these modifications can impact the detection of small objects. In particular, we explore and introduce architectural changes to the different components of the popular YOLOv5 model in order to improve its performance in the detection of small objects for autonomous driving. Initially, we propose group depthwise separable convolution as the improved convolution unit to replace standard convolution. We then integrate this unit to create the attention-based dilated CSP block. Lastly, this block is combined with several proposed modules, including the improved SPP, improved PANet, and improved information paths, to form our IS-YOLOv5 model. We also integrate kernel pruning on the network to accelerate the model deployment on vehicle-mounted mobile platform due to limited computing resources and real-time constraints. Specifically, we propose the versatile network pruning (VNP) technique based on Taylor criterion ranking to prune less-essential kernels in the network. We will show that our modifications barely increase the complexity but significantly improve the detection accuracy and speed. Compared to the conventional YOLOv5, the proposed IS-YOLOv5 model increases the mAP by 8.35% on the BDD100K dataset. Besides, our proposed model improves the detection speed in FPS by 3.10% compared to the YOLOv5 model. When using the VNP scheme, FPS is further increased by 52.14%, while the model size and complexity are reduced by 39.29% and 47.81%, with almost no change in mAP. Nevertheless, when compared to state-of-the-art models, IS-YOLOv5+VNP is found to be conducive to the deployment in autonomous driving systems.
+Keywords: Small object detection; Architectural changes; YOLOv5; Kernel pruning; Lightweight design; Autonomous driving
+
+Wei Chen, Yan Li, Zijian Tian, Fan Zhang,
+2D and 3D object detection algorithms from images: A Survey,
+Array,
+Volume 19,
+2023,
+100305,
+ISSN 2590-0056,
+https://doi.org/10.1016/j.array.2023.100305.
+(https://www.sciencedirect.com/science/article/pii/S2590005623000309)
+Abstract: Object detection is a crucial branch of computer vision that aims to locate and classify objects in images. Using deep convolutional neural networks (CNNs) as the primary framework for object detection can efficiently extract features, which is closer to real-time performance than the traditional model that extracts features manually. In recent years, the rise of Transformer with powerful self-attention mechanisms has further enhanced performance to a new level. However, when it comes to specific vision tasks in the real world, it is necessary to obtain 3D information about the spatial coordinates, orientation, and velocity of objects, which makes research on object detection in 3D scenes more active. Although LiDAR-based 3D object detection algorithms have excellent performance, they are difficult to popularize in practical applications due to their high price. Hence, we summarize the development process, different frameworks, contributions, advantages, disadvantages, and development trends of image-based 2D and 3D object detection algorithms in recent years to help more researchers better understand this field. Besides, representative datasets，evaluation metrics，related techniques and applications are introduced, and some valuable research directions are discussed.
+Keywords: Image; Object detection; CNNs; Transformer; 3D
+
+Li Wang, Dawei Zhao, Tao Wu, Hao Fu, Zhiyu Wang, Liang Xiao, Xin Xu, Bin Dai,
+Drosophila-inspired 3D moving object detection based on point clouds,
+Information Sciences,
+Volume 534,
+2020,
+Pages 154-171,
+ISSN 0020-0255,
+https://doi.org/10.1016/j.ins.2020.05.006.
+(https://www.sciencedirect.com/science/article/pii/S0020025520303960)
+Abstract: 3D moving object detection is one of the most critical tasks in dynamic scene analysis. In this paper, we propose a novel Drosophila-inspired 3D moving object detection method using Lidar sensors. According to the theory of elementary motion detector, we have developed a motion detector based on the shallow visual neural pathway of Drosophila. This detector is sensitive to the movement of objects and can well suppress background noise. Designing neural circuits with different connection modes, the approach searches for motion areas in a coarse-to-fine fashion and extracts point clouds of each motion area to form moving object proposals. An improved 3D object detection network is then used to estimate the point clouds of each proposal and efficiently generates the 3D bounding boxes and the object categories. We evaluate the proposed approach on the widely-used KITTI benchmark, and state-of-the-art performance was obtained by using the proposed approach on the task of motion detection.
+Keywords: 3D moving object detection; Elementary motion detector; Drosophila-inspired model; Neural network; Autonomous driving
+
+Kishore Kumar Anguchamy, Venketesh Palanisamy,
+Real-time object detection using improvised YOLOv4 and feature mapping technique for autonomous driving,
+Expert Systems with Applications,
+Volume 280,
+2025,
+127452,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2025.127452.
+(https://www.sciencedirect.com/science/article/pii/S0957417425010747)
+Abstract: Drivable area detection and object detection are the primary actors in any autonomous driving technology. The proposed solution in this article contemplates a model for object detection in real-time with an improvised deep learning solution implemented with a modified YOLO algorithm. The proposed algorithm is replaced with the feature pyramid in place of spatial dimension features, for reducing the computational complexity of the standard YOLOv4 algorithm. The attention span of the YOLOv4 algorithm is improved by CBAM (Convolutional Block Attention Module) structures, where the speed of detecting the objects is associated with the keyframes and feature pyramid. BDD100K data set is available open-source and considered to be the benchmark for autonomous driving technology. This dataset is used for evaluating the performance of the proposed technique and the speed of detection significantly improved 4.72 frames per second when compared against other techniques.
+Keywords: Convolutional neural network; Deep learning; Object detection; Self-driving car; Feature mapping
+
+Qihuai Chen, Jianhe Wen, Tianliang Lin, Haoling Ren,
+Target recognition and localization of environmental perception system based on binocular cameras for unmanned cleaning vehicle,
+Engineering Applications of Artificial Intelligence,
+Volume 143,
+2025,
+109994,
+ISSN 0952-1976,
+https://doi.org/10.1016/j.engappai.2024.109994.
+(https://www.sciencedirect.com/science/article/pii/S0952197624021535)
+Abstract: Cleaning vehicles, vital in municipal projects, automated via unmanned driving, boost urban cleaning efficiency and sustainability, cutting costs and minimizing environmental impact. Environmental perception is key to their automation, differing from passenger cars. Cleaning vehicles often encounter issues such as low cleaning efficiency, high energy consumption, and suboptimal cleaning results when operating in complex and variable scenarios. The automated cleaning vehicle uses an environmental perception system to identify waste and provides vital information for controlling its cleaning devices, boosting both cleaning and energy efficiency. However, existing object detection algorithms struggle with challenges such as background interference and the small size of road debris, leading to limited detection capabilities. This paper proposes an environmental perception solution specifically tailored for the operational context of cleaning vehicles. The solution uses a binocular camera system, integrating stereo vision technology with object detection algorithms to identify and locate road debris. Attention mechanisms are incorporated to enhance model detection accuracy. An additional layer for small object detection is implemented to improve the ability to detect smaller targets, increasing the mean average precision by 5.1% and the recall rate by 6.61%. These improvements could lead to more accurate and efficient automated cleaning systems in urban environments, with far-reaching implications for the future of smart cities.To validate the feasibility of the proposed solution, tests are conducted using a road debris dataset and real-vehicle application experiments. The experimental results demonstrate that the system effectively performs debris identification and localization tasks on cleaning vehicles.
+Keywords: Cleaning vehicle; Autonomous driving; Binocular cameras; Binocular stereo vision; Object detection; Deep learning
+
+Zeyang Cheng, Xiaojie Du, Qingyu Liu, Shuguang Zhan, Bo Yu, He Wang, Xiaojun Zhu, Can Xu,
+Object detection in autonomous driving scenario using YOLOv8-SimAM: a robust test in different datasets,
+Transportmetrica A Transport Science,
+2025,
+,
+ISSN 2324-9935,
+https://doi.org/10.1080/23249935.2025.2511818.
+(https://www.sciencedirect.com/science/article/pii/S2324993525000545)
+Abstract: With the advancement of deep learning, AI applications in transportation, particularly in target detection and tracking, have made significant strides. However, real-time vehicle detection of autonomous driving scenario still faces challenges of low accuracy and efficiency. This study proposes an improved YOLOv8-SimAM network, aiming to enhance detection accuracy. The SimAM attention module is introduced and the loss function is optimised to enhance the features of target vehicle without increasing network parameters. YOLOv8-SimAM is combined with DeepSORT for efficient tracking. Experiments show that the YOLOv8-SimAM improves mAP by 1%, accuracy by 4%, and FPS by 3.36% on the UA-DETRAC dataset compared to YOLOv8. It also performs excellently on BDD100k and MIT vehicle datasets, addressing multi-target detection issues in complex scenarios. The model’s improved accuracy and efficiency, along with its strong generalisability and reliability, make it suitable for various driving environments, providing robust support for full-scale autonomous driving.
+Keywords: Object detection; YOLOv8-SimAM; DeepSORT; autonomous driving
+
+ Rashmi, Rashmi Chaudhry,
+SD-YOLO-AWDNet: A hybrid approach for smart object detection in challenging weather for self-driving cars,
+Expert Systems with Applications,
+Volume 256,
+2024,
+124942,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2024.124942.
+(https://www.sciencedirect.com/science/article/pii/S0957417424018098)
+Abstract: Several deep learning algorithms are currently focused on object detection in adverse weather scenarios for autonomous driving systems. However, these algorithms face challenges in real-time scenarios, leading to a reduction in detection accuracy. To tackle these issues, this paper introduces a lightweight object detection model named Self Driving Cars You Only Look Once Adverse Weather Detection Network (SD-YOLO-AWDNet), derived from enhancements to the YOLOv5 algorithm. The model incorporates four progressive improvement levels within the YOLOv5 framework. This includes integrating C3Ghost and GhostConv modules in the backbone to enhance detection speed by reducing computational overhead during feature extraction. To address potential accuracy issues arising from these modules, Depthwise-Separable Dilated Convolutions (DSDC) are introduced, striking a balance between accuracy and parameter reduction. The model further incorporates a Coordinate Attention (CA) module in the GhostBottleneck to enhance feature extraction and eliminate unnecessary features, improving precision in object detection. Additionally, a novel “Focal Distribution Loss” replaces CIoU Loss, accelerating bounding box regression and loss reduction. Test dataset experiments demonstrate that SD-YOLO-AWDNet outperforms YOLOv5 with a 54% decrease in FLOPs, a 52.53% decrease in model parameters, a 2.24% increase in mAP, and a threefold improvement in detection speed.
+Keywords: Object detection; Self driving cars; Deep neural network; YOLO
+
+Robert Fonod, Haechan Cho, Hwasoo Yeo, Nikolas Geroliminis,
+Advanced computer vision for extracting georeferenced vehicle trajectories from drone imagery,
+Transportation Research Part C: Emerging Technologies,
+Volume 178,
+2025,
+105205,
+ISSN 0968-090X,
+https://doi.org/10.1016/j.trc.2025.105205.
+(https://www.sciencedirect.com/science/article/pii/S0968090X25002098)
+Abstract: This paper presents a comprehensive framework for extracting georeferenced vehicle trajectories from high-altitude drone imagery, addressing key challenges in urban traffic monitoring and the limitations of traditional ground-based systems. Our approach integrates several novel contributions, including a tailored object detector optimized for high-altitude bird’s-eye view perspectives, a unique track stabilization method that uses detected vehicle bounding boxes as exclusion masks during image registration, and an orthophoto and master frame-based georeferencing strategy that enhances consistent alignment across multiple drone viewpoints. Additionally, our framework features robust vehicle dimension estimation and detailed road segmentation, enabling comprehensive traffic dynamics analysis. Conducted in the Songdo International Business District, South Korea, the study utilized a multi-drone experiment covering 20 intersections, capturing approximately 12TB of ultra-high-definition video data over four days. The framework produced two high-quality datasets: the Songdo Traffic dataset, comprising approximately 700,000 unique vehicle trajectories, and the Songdo Vision dataset, containing over 5000 human-annotated images with about 300,000 vehicle instances categorized into four classes. Comparisons with high-precision sensor data from an instrumented probe vehicle highlight the accuracy and consistency of our extraction pipeline in dense urban environments. The public release of the Songdo Traffic and Songdo Vision datasets, along with the complete source code for the extraction pipeline, establishes new benchmarks in data quality, reproducibility, and scalability in traffic research. The results demonstrate the potential of integrating drone technology with advanced computer vision methods for precise and cost-effective urban traffic monitoring, providing valuable resources for developing intelligent transportation systems and enhancing traffic management strategies.
+Keywords: Traffic monitoring; Machine vision; Vehicle tracking; Video image processing; Georeferenced vehicle trajectories; Multi-drone data collection; Urban traffic
+
+Jiaqi Wang, Jian Su,
+A Review of Object Detection Techniques in IoT-Based Intelligent Transportation Systems,
+Computers, Materials and Continua,
+Volume 84, Issue 1,
+2025,
+Pages 125-152,
+ISSN 1546-2218,
+https://doi.org/10.32604/cmc.2025.064309.
+(https://www.sciencedirect.com/science/article/pii/S1546221825005211)
+Abstract: The Intelligent Transportation System (ITS), as a vital means to alleviate traffic congestion and reduce traffic accidents, demonstrates immense potential in improving traffic safety and efficiency through the integration of Internet of Things (IoT) technologies. The enhancement of its performance largely depends on breakthrough advancements in object detection technology. However, current object detection technology still faces numerous challenges, such as accuracy, robustness, and data privacy issues. These challenges are particularly critical in the application of ITS and require in-depth analysis and exploration of future improvement directions. This study provides a comprehensive review of the development of object detection technology and analyzes its specific applications in ITS, aiming to thoroughly explore the use and advancement of object detection technologies in IoT-based intelligent transportation systems. To achieve this objective, we adopted the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) approach to search, screen, and assess the eligibility of relevant literature, ultimately including 88 studies. Through an analysis of these studies, we summarized the characteristics, advantages, and limitations of object detection technology across the traditional methods stage and the deep learning-based methods stage. Additionally, we examined its applications in ITS from three perspectives: vehicle detection, pedestrian detection, and traffic sign detection. We also identified the major challenges currently faced by these technologies and proposed future directions for addressing these issues. This review offers researchers a comprehensive perspective, identifying potential improvement directions for object detection technology in ITS, including accuracy, robustness, real-time performance, data annotation cost, and data privacy. In doing so, it provides significant guidance for the further development of IoT-based intelligent transportation systems.
+Keywords: Intelligent transportation systems; Internet of Things; object detection; deep learning
+
+Ke Wang, Gang Li, Junlan Chen, Yan Long, Tao Chen, Long Chen, Qin Xia,
+The adaptability and challenges of autonomous vehicles to pedestrians in urban China,
+Accident Analysis & Prevention,
+Volume 145,
+2020,
+105692,
+ISSN 0001-4575,
+https://doi.org/10.1016/j.aap.2020.105692.
+(https://www.sciencedirect.com/science/article/pii/S0001457520302475)
+Abstract: China is the world's largest automotive market and is ambitious for autonomous vehicles (AVs) development. As one of the key goals of AVs, pedestrian safety is an important issue in China. Despite the rapid development of driverless technologies in recent years, there is a lack of researches on the adaptability of AVs to pedestrians. To fill the gap, this study would discuss the adaptability of current driverless technologies to China urban pedestrians by reviewing the latest researches. The paper firstly analyzed typical Chinese pedestrian behaviors and summarized the safety demands of pedestrians for AVs through articles and open database data, which are worked as the evaluation criteria. Then, corresponding driverless technologies are carefully reviewed. Finally, the adaptability would be given combining the above analyses. Our review found that autonomous vehicles have trouble in the occluded pedestrian environment and Chinese pedestrians do not accept AVs well. And more explorations should be conducted on standard human-machine interaction, interaction information overload avoidance, occluded pedestrians detection and nation-based receptivity research. The conclusions are very useful for motor corporations and driverless car researchers to place more attention on the complexity of the Chinese pedestrian environment, for transportation experts to protect pedestrian safety in the context of AVs, and for governors to think about making new pedestrians policies to welcome the upcoming driverless cars.
+Keywords: Chinese pedestrian environment; Adaptability; Autonomous vehicles; Road safety; Urban China
+
+Hao Du, Lu Ren, Yuanda Wang, Xiang Cao, Changyin Sun,
+Advancements in perception system with multi-sensor fusion for embodied agents,
+Information Fusion,
+Volume 117,
+2025,
+102859,
+ISSN 1566-2535,
+https://doi.org/10.1016/j.inffus.2024.102859.
+(https://www.sciencedirect.com/science/article/pii/S1566253524006377)
+Abstract: The multi-sensor data fusion perception technology, as a pivotal technique for achieving complex environmental perception and decision-making, has been garnering extensive attention from researchers. To date, there has been a lack of comprehensive review articles discussing the research progress of multi-sensor fusion perception systems for embodied agents, particularly in terms of analyzing the agent’s perception of itself and the surrounding scene. To address this gap and encourage further research, this study defines key terminology and analyzes datasets from the past two decades, focusing on advancements in multi-sensor fusion SLAM and multi-sensor scene perception. These key designs can aid researchers in gaining a better understanding of the field and initiating research in the domain of multi-sensor fusion perception for embodied agents. In this survey, we begin with a brief introduction to common sensor types and their characteristics. We then delve into the multi-sensor fusion perception datasets tailored for the domains of autonomous driving, drones, unmanned ground vehicles, and unmanned surface vehicles. Following this, we discuss the classification and fundamental principles of existing multi-sensor data fusion SLAM algorithms, and present the experimental outcomes of various classical fusion frameworks. Subsequently, we comprehensively review the technologies of multi-sensor data fusion scene perception, including object detection, semantic segmentation, instance segmentation, and panoramic understanding. Finally, we summarize our findings and discuss potential future developments in multi-sensor fusion perception technology.
+Keywords: Embodied agents; Multi-sensor; State estimation; Scene perception; Datasets; SLAM
+
+Nusaybah M. Alahdal, Felwa Abukhodair, Leila Haj Meftah, Asma Cherif,
+Real-time Object Detection in Autonomous Vehicles with YOLO,
+Procedia Computer Science,
+Volume 246,
+2024,
+Pages 2792-2801,
+ISSN 1877-0509,
+https://doi.org/10.1016/j.procs.2024.09.392.
+(https://www.sciencedirect.com/science/article/pii/S1877050924024293)
+Abstract: AI analytics enables autonomous cars to detect and recognize objects, such as other vehicles, pedestrians, traffic signs, and obsta- cles, in real-time. Deep learning models, notably the You Only Look Once (YOLO) model, have demonstrated accuracy and speed in obstacle avoidance. However, current datasets are limited, lacking diversity and labeling, hindering their ability to represent real- world scenarios accurately. Besides, previous studies have focused extensively on specific object classes, such as pedestrians and vehicles, often neglecting other objects like bikes and road signs. To address this, we introduce a novel dataset tailored for AV envi- ronments, encompassing various road object types under different conditions. Our innovative methodology relies on self-supervised learning using the late YOLO version to improve model robustness with limited labeled data and AI-driven adaptive model opti- mization based on real-time feedback. We evaluate three YOLO architectures—YOLOv5, YOLOv7, and YOLOv8—customized for AV object detection. Our assessment covers everyday AV objects such as cars, pedestrians, bicycles, and road signs, empha- sizing early detection. We employ the VSim-AV simulator dataset to ensure robust evaluation, augmented with preprocessing techniques to optimize data quality and model generalization. The study reveals that YOLOv5 and YOLOv8 outperform YOLOv7 regarding precision and recall across various object classes, with YOLOv5 leading at 1.3 ms/image and YOLOv8 at 3.3 ms/image. The mean average precision was 0.94 for YOLOv5, 0.441 for YOLOv7, and 0.927 for YOLOv8, highlighting the limitations in current literature and challenges in YOLO model performance.
+Keywords: Smart city; Simulation environment; Deep learning; Artificial intelligence; YOLO; Object detection; Autonomous vehicles
+
+Peng Ping, Zhengpeng Yang, Lu Tao, Quan Shi, Weiping Ding,
+BEV-TinySpotter: A novel BEV perception method considering multi-dimensional feature fusion of small target,
+Information Fusion,
+Volume 116,
+2025,
+102793,
+ISSN 1566-2535,
+https://doi.org/10.1016/j.inffus.2024.102793.
+(https://www.sciencedirect.com/science/article/pii/S1566253524005712)
+Abstract: The BEV perceptual integrity depends on the ability to accurately capture multi-scale targets. However, the detection of multi-scale targets, especially small targets, is often affected by perceptual noise, information sparsity, and target occlusion, which subsequently affecting the accuracy of BEV perception and causing certain hidden danger to driving safety. To address these issues, we propose a novel BEV perception method BEV-TinySpotter (BEV-TS), which introduced two feature detection enhancement modules and one analytical causal reasoning module to highlighting small object features and improving the accuracy and robustness of small object detection. Specifically, we first enhance the feature recognition of small targets using the multi-scale spatial information acquisition module, and introduce the distribution and migration weights of small targets reflected in the time-series information. Then, we jointly employ global pooling and local pooling to differentiate the acquisition paths of the information to improve the sensitivity of capturing information for small targets. Additionally, we design causal inference graphs to post-fuse the recognition results of BEV, which utilizes causal reasoning to construct a state description mechanism for small targets, further enhancing the accuracy of BEV perception from a logical reasoning perspective. Compared with other SOTA BEV methods, the proposed method effectively enhances the ability to capture and infer the status of small targets during BEV perception, thus significantly improves the completeness of driving environment sensing.
+Keywords: Autonomous driving; BEV perception; Small object detection; Feature fusion; Causal reasoning
+
+Md Mohsin Kabir, Jamin Rahman Jim, Zoltán Istenes,
+Terrain detection and segmentation for autonomous vehicle navigation: A state-of-the-art systematic review,
+Information Fusion,
+Volume 113,
+2025,
+102644,
+ISSN 1566-2535,
+https://doi.org/10.1016/j.inffus.2024.102644.
+(https://www.sciencedirect.com/science/article/pii/S1566253524004226)
+Abstract: This review comprehensively investigates the current state and emerging trends of autonomous vehicle terrain detection and segmentation. By systematically reviewing literature from various databases, this study outlines the evolution of detection and segmentation techniques from traditional computer vision methods to advanced machine learning and deep learning approaches. It identifies critical technological advancements, evaluates their performance, and discusses the challenges faced under various environmental conditions, data acquisition, and integration with vehicle systems. This study also highlights the need for standardized benchmarks and datasets to facilitate the development and testing of robust terrain detection systems. This review encompasses terrain detection and segmentation in structured environments, such as urban roads and highways, and unstructured environments, including rural paths and off-road terrains, to comprehensively analyze autonomous vehicle navigation challenges. By analyzing recent research findings, this review provides insights into future directions for overcoming these limitations and fostering innovation in the autonomous driving domain.
+Keywords: Autonomous vehicles; Terrain detection; Segmentation techniques; Machine learning; Deep learning; Computer vision
+
+Udink Aulia, Iskandar Hasanuddin, Muhammad Dirhamsyah, Nasaruddin Nasaruddin,
+A new CNN-BASED object detection system for autonomous mobile robots based on real-world vehicle datasets,
+Heliyon,
+Volume 10, Issue 15,
+2024,
+e35247,
+ISSN 2405-8440,
+https://doi.org/10.1016/j.heliyon.2024.e35247.
+(https://www.sciencedirect.com/science/article/pii/S2405844024112789)
+Abstract: Recently, autonomous mobile robots (AMRs) have begun to be used in the delivery of goods, but one of the biggest challenges faced in this field is the navigation system that guides a robot to its destination. The navigation system must be able to identify objects in the robot's path and take evasive actions to avoid them. Developing an object detection system for an AMR requires a deep learning model that is able to achieve a high level of accuracy, with fast inference times, and a model with a compact size that can be run on embedded control systems. Consequently, object recognition requires a convolutional neural network (CNN)-based model that can yield high object classification accuracy and process data quickly. This paper introduces a new CNN-based object detection system for an AMR that employs real-world vehicle datasets. First, we create original real-world datasets of images from Banda Aceh city. We then develop a new CNN-based object identification system that is capable of identifying cars, motorcycles, people, and rickshaws under morning, afternoon, and evening lighting conditions. An SSD Mobilenetv2 FPN Lite 320 × 320 architecture is employed for retraining using these real-world datasets. Quantitative and qualitative performance indicators are then applied to evaluate the CNN model. Training the pre-trained SSD Mobilenetv2 FPN Lite 320 × 320 model improves its classification and detection accuracy, as indicated by its performance results. We conclude that the proposed CNN-based object detection system has the potential for use in an AMR.
+Keywords: Autonomous mobile robot (AMR); Transfer learning; CNN; Real-world datasets; Object detection
+
+Husnain Mushtaq, Xiaoheng Deng, Roohallah Alizadehsani, Muhammad Shahid Iqbal, Tamoor Khan, Adeel Ahmed Abbasi,
+SC3D: Semantic-guided and Class-adaptive cross-domain fusion for 3D object detection in autonomous vehicles,
+Expert Systems with Applications,
+Volume 268,
+2025,
+126359,
+ISSN 0957-4174,
+https://doi.org/10.1016/j.eswa.2024.126359.
+(https://www.sciencedirect.com/science/article/pii/S0957417424032263)
+Abstract: Accurate 3D object detection is critical for safe autonomous driving and smart mobility applications. Existing fusion methods that combine camera and LiDAR data face inefficiencies, including disjointed feature extraction, spatial misalignment, and issues with detecting smaller objects due to road vibrations and clock synchronization errors. Furthermore, heuristic sampling often overlooks key foreground points, diminishing detection accuracy for smaller, occluded objects. To address these challenges, we propose the Semantic-guided and Class-adaptive Hierarchical Cross-domain Fusion (SG-CAD Fusion) framework, which enhances 3D object detection in autonomous driving with three core innovations: (1) a Point Transformer Module that enriches raw LiDAR data with probabilistic features aligned with image pixels, enabling accurate feature synchronization across domains; (2) a Semantic Class-Adaptive Sampling mechanism that preserves essential foreground points as anchor points, facilitating effective discriminative feature learning; and (3) a Progressive Cross-Domain Fusion and Multi-Layer Refinement Network that integrates CNN and Transformer features within a structured progressive hierarchy, combining CNN’s local feature detail with the global contextual depth of Transformers. On the KITTI and NuScenes benchmarks, SG-CAD Fusion achieves impressive Average Precision (AP) scores, with Bird’s Eye View (BEV) detection at 94.08% (easy), 90.11% (moderate), and 85.92% (hard), resulting in a mean AP of 90.03%. For 3D detection, SG-CAD Fusion attains 89.52% (easy), 82.65% (moderate), and 77.92% (hard), with a mean AP of 83.27%. These results validate SG-CAD Fusion’s effectiveness in boosting detection accuracy and segmentation across complex urban scenarios, highlighting its real-world applicability in autonomous vehicles and smart mobility.
+Keywords: 3D object dejection; Semantic point sampling; Self-attention; Spatial features learning; Multi-modal fusion
+
+Juan Wang, Hao Yang, Zizhen Zhang, Nan Zhao, Jixiang Shao, Minghua Wu, Zhigang Ma, Jialu Zhu, Xu An Wang, Haina Song,
+Detection of moving small targets in infrared images for urban traffic monitoring,
+Internet of Things,
+Volume 33,
+2025,
+101673,
+ISSN 2542-6605,
+https://doi.org/10.1016/j.iot.2025.101673.
+(https://www.sciencedirect.com/science/article/pii/S2542660525001878)
+Abstract: The Internet of Vehicles (IoV) and autonomous driving technologies require increasingly robust object detection capabilities, especially for small objects. However, reliably detecting small objects in urban traffic scenarios remains technically challenging under adverse weather conditions, including low illumination, rain, and snow. To address these challenges, we propose a fused IR–visible imaging approach using an enhanced YOLOv9 architecture. The proposed method employs a dual-branch semantic enhancement architecture, which achieves dynamic inter-modal feature weighting through a channel attention mechanism. The visible branch preserves texture details, while the infrared branch extracts thermal radiation characteristics, followed by multi-scale feature-level fusion. Firstly, we present UR-YOLO designed for detecting small targets in urban traffic environments. Secondly, we propose a novel DeeperFuse module that incorporates dual-branch semantic enhancement and channel attention mechanisms for effective multimodal feature fusion. Finally, by jointly optimizing fusion and detection losses, the method preserves critical details, enhances clarity and contrast. Experimental evaluation on the M\relax \special {t4ht=3}FD dataset demonstrates improved detection performance relative to the baseline YOLOv9 model. The results show an increase of 1.4 percentage points in mAP (from 83.3% to 84.7%) and 2.2 percentage points in APsmall (from 51.6% to 53.8%). Furthermore, our method achieves real-time processing at 30 FPS, making it suitable for deployment in urban autonomous driving scenarios. Future work will focus on enhancing model performance via multimodal fusion, lightweight design, and multi-scale feature learning. We will also develop diverse datasets to advance autonomous driving perception in complex environments.
+Keywords: Small object detection; Urban roads; Infrared images; Feature extraction; Feature fusion
+
+José M. Molina, Juan P. Llerena, Luis Usero, Miguel A. Patricio,
+Advances in instance segmentation: Technologies, metrics and applications in computer vision,
+Neurocomputing,
+Volume 625,
+2025,
+129584,
+ISSN 0925-2312,
+https://doi.org/10.1016/j.neucom.2025.129584.
+(https://www.sciencedirect.com/science/article/pii/S0925231225002565)
+Abstract: Instance segmentation is an advanced technique in computer vision that focuses on identifying and classifying each individual object in an image at the pixel level. Unlike semantic segmentation, which groups pixels of similar objects without distinguishing between different instances, instance segmentation assigns unique labels to each object, even if they are of the same class. This makes it possible not only to detect the presence and category of objects in an image but also to locate each specific instance and clearly distinguish them from each other. This problem not only advances the technical and theoretical understanding of how machines see and process digital images, but also has a direct impact on various industries and sectors where computer vision is an essential part of the system. In this paper, we present the current deep learning-based technologies, the metrics used for their evaluation, and a review of general and concrete datasets in general and drone-specific contexts. The results of this study provide a compendium of easily deployable deep learning-based technologies. This review paper aims to accelerate the process of understanding and using instance segmentation technologies for the reader.
+Keywords: Computer Vision; Instance Segmentation; Evaluation Metrics; Datasets
+
+Nicolas Bustos, Mehrsa Mashhadi, Susana K. Lai-Yuen, Sudeep Sarkar, Tapas K. Das,
+A systematic literature review on object detection using near infrared and thermal images,
+Neurocomputing,
+Volume 560,
+2023,
+126804,
+ISSN 0925-2312,
+https://doi.org/10.1016/j.neucom.2023.126804.
+(https://www.sciencedirect.com/science/article/pii/S092523122300927X)
+Abstract: Significant advances have been achieved in object detection techniques using visible images for applications that include military operations, autonomous driving, and security surveillance. However, the quality of visible images suffers from various environmental and illumination conditions resulting in poor detection outcomes. To remedy this, a wide range of new methodologies using visual images together with infrared (IR) images of various wavelengths (including those referred to as thermal images) are being developed and presented to the open literature. Despite this progress, many challenges of object detection still prevail, and it is important to understand them. In this paper, we present a systematic literature review documenting recent advances in object detection using predominantly IR data. We discuss our systematic review process for the identification, filtering, screening, and selection of the relevant methodologies to include in the literature review. The selected methodologies are analyzed and organized into three main groups: (1) object detection in IR images, which includes detection of labeled objects, small target detection, and background subtraction, (2) object detection on multispectral data, and (3) data fusion approaches. Reviewed studies consider different types of objects, environmental conditions, and types of images, particularly in the IR domain. Finally, we discuss some of the key limitations of the current literature and opportunities for future research for improving object detection using both visible and IR data as well as LiDAR and radar data, when applicable.
+Keywords: Object detection; Target recognition; Visible images; Thermal images; Infrared images
