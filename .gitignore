@@ -4,7 +4,7 @@ __pycache__
 __pycache/
 .pytest_cache
 /data_files
-.csv
-.txt
-.enw
-.ris
+*.csv
+*.txt
+*.enw
+*.ris
