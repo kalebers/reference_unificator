@@ -73,28 +73,39 @@ def parse_ris_scopus(file_path):
         records.append(record)
     return records
 
-# ACM ENW
+# ACM ENW (corrigido)
 def parse_enw_ACM(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     entries = []
     entry = {}
+    current_key = ""
+
     for line in lines:
-        if line.strip() == "":
-            continue
-        elif line.startswith("%0"):
-            entry = {"Database": "ACM"}
-        elif line.startswith("%"):
-            tag = line[:2]
-            value = line[3:].strip()
-            if tag in entry:
-                entry[tag] += "; " + value
+        line = line.strip()
+
+        if line.startswith("%0"):
+            if entry:
+                entries.append(entry)
+                entry = {"Database": "ACM"}
             else:
-                entry[tag] = value
-        elif line.startswith("\n") and entry:
-            entries.append(entry)
-            entry = {}
+                entry = {"Database": "ACM"}
+            current_key = "%0"
+            entry[current_key] = line[3:].strip()
+
+        elif line.startswith("%"):
+            current_key = line[:2]
+            value = line[3:].strip()
+            if current_key in entry:
+                entry[current_key] += "; " + value
+            else:
+                entry[current_key] = value
+
+        else:
+            if current_key and current_key in entry:
+                entry[current_key] += " " + line.strip()
+
     if entry:
         entries.append(entry)
 
