@@ -2,6 +2,11 @@ import pandas as pd
 import re
 import os
 
+def sanitize_text(text):
+    if isinstance(text, str):
+        return text.replace("\n", " ").replace("\r", " ").strip()
+    return text
+
 # IEEE CSV
 def parse_ieee_csv(file_path):
     df = pd.read_csv(file_path)
@@ -10,22 +15,22 @@ def parse_ieee_csv(file_path):
     for _, row in df.iterrows():
         record = {
             "Database": "IEEE",
-            "Authors": row.get("Authors", ""),
-            "Title": row.get("Document Title", ""),
-            "Journal": row.get("Publication Title", ""),
+            "Authors": sanitize_text(row.get("Authors", "")),
+            "Title": sanitize_text(row.get("Document Title", "")),
+            "Journal": sanitize_text(row.get("Publication Title", "")),
             "Year": row.get("Publication Year", ""),
             "Volume": row.get("Volume", ""),
             "Issue": row.get("Issue", ""),
             "Pages": f"{row.get('Start Page', '')}-{row.get('End Page', '')}" if pd.notna(row.get("Start Page", "")) and pd.notna(row.get("End Page", "")) else "",
-            "DOI": row.get("DOI", ""),
-            "URL": row.get("PDF Link", ""),
-            "Abstract": row.get("Abstract", ""),
-            "Keywords": row.get("Author Keywords", "")
+            "DOI": sanitize_text(row.get("DOI", "")),
+            "URL": sanitize_text(row.get("PDF Link", "")),
+            "Abstract": sanitize_text(row.get("Abstract", "")),
+            "Keywords": sanitize_text(row.get("Author Keywords", ""))
         }
         records.append(record)
     return records
 
-# Scopus RIS 
+# Scopus RIS
 def parse_ris_scopus(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -58,22 +63,22 @@ def parse_ris_scopus(file_path):
     for e in entries:
         record = {
             "Database": "Scopus",
-            "Authors": e.get("AU", ""),
-            "Title": e.get("TI", ""),
-            "Journal": e.get("JO", ""),
+            "Authors": sanitize_text(e.get("AU", "")),
+            "Title": sanitize_text(e.get("TI", "")),
+            "Journal": sanitize_text(e.get("JO", "")),
             "Year": e.get("PY", ""),
             "Volume": e.get("VL", ""),
             "Issue": e.get("IS", ""),
             "Pages": f"{e.get('SP', '')}-{e.get('EP', '')}" if "SP" in e and "EP" in e else "",
-            "DOI": e.get("DO", ""),
-            "URL": e.get("UR", ""),
-            "Abstract": e.get("AB", ""),
-            "Keywords": e.get("KW", "")
+            "DOI": sanitize_text(e.get("DO", "")),
+            "URL": sanitize_text(e.get("UR", "")),
+            "Abstract": sanitize_text(e.get("AB", "")),
+            "Keywords": sanitize_text(e.get("KW", ""))
         }
         records.append(record)
     return records
 
-# ACM ENW (corrigido)
+# ACM ENW (corrigido e sanitizado)
 def parse_enw_ACM(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -113,17 +118,17 @@ def parse_enw_ACM(file_path):
     for e in entries:
         record = {
             "Database": "ACM",
-            "Authors": e.get("%A", ""),
-            "Title": e.get("%T", ""),
-            "Journal": e.get("%J", ""),
+            "Authors": sanitize_text(e.get("%A", "")),
+            "Title": sanitize_text(e.get("%T", "")),
+            "Journal": sanitize_text(e.get("%J", "")),
             "Year": e.get("%D", ""),
             "Volume": e.get("%V", ""),
             "Issue": e.get("%N", ""),
-            "Pages": e.get("%P", ""),
-            "DOI": e.get("%R", ""),
-            "URL": e.get("%U", ""),
-            "Abstract": e.get("%X", ""),
-            "Keywords": e.get("%K", "")
+            "Pages": sanitize_text(e.get("%P", "")),
+            "DOI": sanitize_text(e.get("%R", "")),
+            "URL": sanitize_text(e.get("%U", "")),
+            "Abstract": sanitize_text(e.get("%X", "")),
+            "Keywords": sanitize_text(e.get("%K", ""))
         }
         records.append(record)
     return records
@@ -151,27 +156,28 @@ def parse_sciencedirect(txt):
         }
 
         try:
-            record["Authors"] = lines[0].strip()
-            record["Title"] = lines[1].strip()
-            record["Journal"] = lines[2].strip()
+            record["Authors"] = sanitize_text(lines[0])
+            record["Title"] = sanitize_text(lines[1])
+            record["Journal"] = sanitize_text(lines[2])
 
             for i in range(3, len(lines)):
-                if "Volume" in lines[i]:
-                    record["Volume"] = lines[i].replace("Volume", "").strip()
-                elif re.match(r"\d{4}", lines[i]):
-                    record["Year"] = lines[i].strip()
-                elif "Pages" in lines[i]:
-                    record["Pages"] = lines[i].replace("Pages", "").strip()
-                elif "Issue" in lines[i]:
-                    record["Issue"] = lines[i].replace("Issue", "").strip()
-                elif lines[i].startswith("https://doi"):
-                    record["DOI"] = lines[i].strip()
-                elif lines[i].startswith("(") and "sciencedirect.com" in lines[i]:
-                    record["URL"] = lines[i].strip("()")
-                elif lines[i].startswith("Abstract:"):
-                    record["Abstract"] = lines[i].replace("Abstract:", "").strip()
-                elif lines[i].startswith("Keywords:"):
-                    record["Keywords"] = lines[i].replace("Keywords:", "").strip()
+                line = lines[i]
+                if "Volume" in line:
+                    record["Volume"] = sanitize_text(line.replace("Volume", ""))
+                elif re.match(r"\d{4}", line):
+                    record["Year"] = sanitize_text(line)
+                elif "Pages" in line:
+                    record["Pages"] = sanitize_text(line.replace("Pages", ""))
+                elif "Issue" in line:
+                    record["Issue"] = sanitize_text(line.replace("Issue", ""))
+                elif line.startswith("https://doi"):
+                    record["DOI"] = sanitize_text(line)
+                elif line.startswith("(") and "sciencedirect.com" in line:
+                    record["URL"] = sanitize_text(line.strip("()"))
+                elif line.startswith("Abstract:"):
+                    record["Abstract"] = sanitize_text(line.replace("Abstract:", ""))
+                elif line.startswith("Keywords:"):
+                    record["Keywords"] = sanitize_text(line.replace("Keywords:", ""))
 
         except Exception as e:
             print(f"Erro ao processar entrada: {e}")
@@ -208,9 +214,9 @@ for filename in os.listdir(referencias_dir):
     except Exception as e:
         print(f"[X] Erro ao processar {filename}: {e}")
 
-# Cria DataFrame e salva como CSV
+# Cria DataFrame e salva como CSV separado por ponto e vírgula (compatível com Excel na Europa)
 df_merged = pd.DataFrame(todos_registros)
 output_csv = os.path.join(os.path.dirname(__file__), "referencias_unificadas.csv")
-df_merged.to_csv(output_csv, index=False, encoding='utf-8-sig')
+df_merged.to_csv(output_csv, index=False, encoding='utf-8-sig', sep=';')
 
-print(f"\n Arquivo final gerado com sucesso: {output_csv}")
+print(f"\n📄 Arquivo final gerado com sucesso: {output_csv}")
