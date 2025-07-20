@@ -78,57 +78,29 @@ def parse_ris_scopus(file_path):
         records.append(record)
     return records
 
-# ACM ENW (corrigido e sanitizado)
-def parse_enw_ACM(file_path):
+# ACM BibTeX
+def parse_bib_acm(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+        content = f.read()
 
-    entries = []
-    entry = {}
-    current_key = ""
-
-    for line in lines:
-        line = line.strip()
-
-        if line.startswith("%0"):
-            if entry:
-                entries.append(entry)
-                entry = {"Database": "ACM"}
-            else:
-                entry = {"Database": "ACM"}
-            current_key = "%0"
-            entry[current_key] = line[3:].strip()
-
-        elif line.startswith("%"):
-            current_key = line[:2]
-            value = line[3:].strip()
-            if current_key in entry:
-                entry[current_key] += "; " + value
-            else:
-                entry[current_key] = value
-
-        else:
-            if current_key and current_key in entry:
-                entry[current_key] += " " + line.strip()
-
-    if entry:
-        entries.append(entry)
-
+    entries = re.findall(r'@[\w]+\s*{[^@]*}', content, re.DOTALL)
     records = []
-    for e in entries:
+
+    for entry in entries:
+        fields = dict(re.findall(r'(\w+)\s*=\s*[{"]([^}"]+)[}"]', entry, re.IGNORECASE))
         record = {
             "Database": "ACM",
-            "Authors": sanitize_text(e.get("%A", "")),
-            "Title": sanitize_text(e.get("%T", "")),
-            "Journal": sanitize_text(e.get("%J", "")),
-            "Year": e.get("%D", ""),
-            "Volume": e.get("%V", ""),
-            "Issue": e.get("%N", ""),
-            "Pages": sanitize_text(e.get("%P", "")),
-            "DOI": sanitize_text(e.get("%R", "")),
-            "URL": sanitize_text(e.get("%U", "")),
-            "Abstract": sanitize_text(e.get("%X", "")),
-            "Keywords": sanitize_text(e.get("%K", ""))
+            "Authors": sanitize_text(fields.get("author", "")),
+            "Title": sanitize_text(fields.get("title", "")),
+            "Journal": sanitize_text(fields.get("journal", "")),
+            "Year": fields.get("year", ""),
+            "Volume": fields.get("volume", ""),
+            "Issue": fields.get("number", ""),
+            "Pages": sanitize_text(fields.get("pages", "")),
+            "DOI": sanitize_text(fields.get("doi", "")),
+            "URL": sanitize_text(fields.get("url", "")),
+            "Abstract": sanitize_text(fields.get("abstract", "")),
+            "Keywords": sanitize_text(fields.get("keywords", ""))
         }
         records.append(record)
     return records
@@ -174,10 +146,10 @@ def parse_sciencedirect(txt):
                     record["DOI"] = sanitize_text(line)
                 elif line.startswith("(") and "sciencedirect.com" in line:
                     record["URL"] = sanitize_text(line.strip("()"))
-                elif line.startswith("Abstract:"):
-                    record["Abstract"] = sanitize_text(line.replace("Abstract:", ""))
-                elif line.startswith("Keywords:"):
-                    record["Keywords"] = sanitize_text(line.replace("Keywords:", ""))
+                elif line.lower().startswith("abstract"):
+                    record["Abstract"] = sanitize_text(line.split(":", 1)[-1])
+                elif line.lower().startswith("keywords"):
+                    record["Keywords"] = sanitize_text(line.split(":", 1)[-1])
 
         except Exception as e:
             print(f"Erro ao processar entrada: {e}")
@@ -186,11 +158,9 @@ def parse_sciencedirect(txt):
 
 # Caminho para a pasta "referencias"
 referencias_dir = os.path.join(os.path.dirname(__file__), "referencias")
-
-# Lista para todos os registros
 todos_registros = []
 
-# Processa todos os arquivos
+# Processa os arquivos
 for filename in os.listdir(referencias_dir):
     path = os.path.join(referencias_dir, filename)
 
@@ -199,8 +169,8 @@ for filename in os.listdir(referencias_dir):
             registros = parse_ieee_csv(path)
         elif filename.endswith(".ris"):
             registros = parse_ris_scopus(path)
-        elif filename.endswith(".enw"):
-            registros = parse_enw_ACM(path)
+        elif filename.endswith(".bib"):
+            registros = parse_bib_acm(path)
         elif filename.endswith(".txt"):
             with open(path, "r", encoding="utf-8") as f:
                 conteudo = f.read()
@@ -214,7 +184,7 @@ for filename in os.listdir(referencias_dir):
     except Exception as e:
         print(f"[X] Erro ao processar {filename}: {e}")
 
-# Cria DataFrame e salva como CSV separado por ponto e vírgula (compatível com Excel na Europa)
+# Cria DataFrame e salva como CSV (ponto e vírgula para Excel europeu)
 df_merged = pd.DataFrame(todos_registros)
 output_csv = os.path.join(os.path.dirname(__file__), "referencias_unificadas.csv")
 df_merged.to_csv(output_csv, index=False, encoding='utf-8-sig', sep=';')
