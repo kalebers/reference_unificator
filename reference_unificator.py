@@ -105,6 +105,33 @@ def parse_bib_acm(file_path):
         records.append(record)
     return records
 
+# IEEE BibTeX
+def parse_bib_ieee(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    entries = re.findall(r'@[\w]+\s*{[^@]*}', content, re.DOTALL)
+    records = []
+
+    for entry in entries:
+        fields = dict(re.findall(r'(\w+)\s*=\s*[{"]([^}"]+)[}"]', entry, re.IGNORECASE))
+        record = {
+            "Database": "IEEE",
+            "Authors": sanitize_text(fields.get("author", "")),
+            "Title": sanitize_text(fields.get("title", "")),
+            "Journal": sanitize_text(fields.get("journal", "")),
+            "Year": fields.get("year", ""),
+            "Volume": fields.get("volume", ""),
+            "Issue": fields.get("number", ""),
+            "Pages": sanitize_text(fields.get("pages", "")),
+            "DOI": sanitize_text(fields.get("doi", "")),
+            "URL": sanitize_text(fields.get("url", "")),
+            "Abstract": sanitize_text(fields.get("abstract", "")),
+            "Keywords": sanitize_text(fields.get("keywords", ""))
+        }
+        records.append(record)
+    return records
+
 # ScienceDirect TXT
 def parse_sciencedirect(txt):
     entries = txt.strip().split("\n\n")
@@ -169,8 +196,10 @@ for filename in os.listdir(referencias_dir):
             registros = parse_ieee_csv(path)
         elif filename.endswith(".ris"):
             registros = parse_ris_scopus(path)
-        elif filename.endswith(".bib"):
+        elif filename.endswith(".bib") and "acm" in filename.lower():
             registros = parse_bib_acm(path)
+        elif filename.endswith(".bib") and "ieee" in filename.lower():
+            registros = parse_bib_ieee(path)
         elif filename.endswith(".txt"):
             with open(path, "r", encoding="utf-8") as f:
                 conteudo = f.read()
