@@ -1,6 +1,5 @@
 # Reference Unificator 
-- This script is designed to unify references in a .csv file. It reades different files from the article bases IEEE, Scopus, ACM and ScienceDirec, where the extensions 
-- .csv, .ris, .enw and.txt, respectively, are used. The script will read the files and extract the references, then it will unify them into a single .csv file.
+- This script is designed to unify references in a .csv file. It reads different files from the article bases IEEE, Scopus, ACM and ScienceDirec, where the extensions .bib, .csv, .ris, .enw and.txt, respectively, are used. The script will read the files and extract the references, then it will unify them into a single .csv file. Still, you have to input the search string manually in the article base to download the the citations. The script then will parse all files and unify them together in one file.
 
 - You can use the script by running the python file.
 # Requirements:
