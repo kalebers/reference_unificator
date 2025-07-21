@@ -9,3 +9,4 @@ __pycache/
 *.enw
 *.ris
 *.bib
+/articles
